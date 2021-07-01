@@ -1,0 +1,30 @@
+<launch>
+
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="race" default="0"/>
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
+      args="-file $(find texas_robocamp)/models/texbot.urdf 
+      -urdf 
+      -x $(arg x)
+      -y $(arg y)
+      -model texbot">
+    </node>
+
+    <!-- Sensors -->
+    <node pkg="texas_robocamp" type="color_sensor" name="color_sensor"/>
+    
+    <!-- Display the LCD or Timer if its the race -->
+    <group unless="$(arg race)">
+    	<node pkg="texas_robocamp" type="display" name="display"/>
+    </group>
+
+    <group if="$(arg race)">
+    	<node pkg="texas_robocamp" type="timer" name="timer"/>
+    </group>
+
+
+    <node pkg="texas_robocamp" type="reset_robot.py" name="reset"/>
+
+</launch>

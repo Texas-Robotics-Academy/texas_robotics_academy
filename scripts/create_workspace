@@ -1,0 +1,12 @@
+#!/bin/sh -e
+test -z $1 && (echo "Usage: `basename $0` <directory name>" && exit 1)
+test -x $1 && (echo "$1 already exists." && exit 1)
+mkdir -p $1/src
+cd $1
+catkin init
+catkin build
+
+echo .
+echo "Type the following commands to finish setup:"
+echo "  cd $1"
+echo "  source devel/setup.bash"
