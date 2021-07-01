@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(texas_robocamp)
+project(texas_robotics_academy)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
@@ -249,7 +249,7 @@ install(DIRECTORY worlds
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_texas_robocamp.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_texas_robotics_academy.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

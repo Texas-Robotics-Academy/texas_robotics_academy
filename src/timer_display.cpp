@@ -128,7 +128,7 @@ int main (int argc, char **argv){
   buttonPub = node.advertise<std_msgs::UInt8>("/button", 1000);
   resetPub = node.advertise<std_msgs::Empty>("/reset", 1000);
 
-  app = gtk_application_new ("edu.utexas.cs.robocamp2020.timer", G_APPLICATION_FLAGS_NONE);
+  app = gtk_application_new ("edu.utexas.cs.roboacademy2021.timer", G_APPLICATION_FLAGS_NONE);
   g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
 
   g_timeout_add(10, spinTimer, NULL);

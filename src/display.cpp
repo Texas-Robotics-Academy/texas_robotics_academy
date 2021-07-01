@@ -69,7 +69,7 @@ activate (GtkApplication *app,
 
   lcdLabel = gtk_label_new("");
   setLine(0, "TexBot");
-  setLine(1, "RoboCamp 2020");
+  setLine(1, "Texas Robotics Academy 2021");
   gtk_style_context_add_class(gtk_widget_get_style_context(GTK_WIDGET(lcdLabel)), "lcd");
 //  gtk_widget_set_halign(lcdLabel, GTK_ALIGN_START);
   gtk_container_add (GTK_CONTAINER (mainBox), lcdLabel);
@@ -126,7 +126,7 @@ int main (int argc, char **argv){
   buttonPub = node.advertise<std_msgs::UInt8>("/button", 5);
   resetPub = node.advertise<std_msgs::Empty>("/reset", 5);
 
-  app = gtk_application_new ("edu.utexas.cs.robocamp2020", G_APPLICATION_FLAGS_NONE);
+  app = gtk_application_new ("edu.utexas.cs.roboacademy2021", G_APPLICATION_FLAGS_NONE);
   g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
 
   g_timeout_add(10, spinTimer, NULL);

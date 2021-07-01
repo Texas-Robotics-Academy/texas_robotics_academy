@@ -4,7 +4,7 @@
     <arg name="y" default="0"/>
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
-      args="-file $(find texas_robocamp)/models/texbot.urdf 
+      args="-file $(find texas_robotics_academy)/models/texbot.urdf 
       -urdf 
       -x $(arg x)
       -y $(arg y)
@@ -12,9 +12,9 @@
     </node>
 
     <!-- Sensors -->
-    <node pkg="texas_robocamp" type="color_sensor" name="color_sensor"/>
-    <node pkg="texas_robocamp" type="display" name="display"/>
+    <node pkg="texas_robotics_academy" type="color_sensor" name="color_sensor"/>
+    <node pkg="texas_robotics_academy" type="display" name="display"/>
 
-    <node pkg="texas_robocamp" type="reset_robot.py" name="reset"/>
+    <node pkg="texas_robotics_academy" type="reset_robot.py" name="reset"/>
 
 </launch>

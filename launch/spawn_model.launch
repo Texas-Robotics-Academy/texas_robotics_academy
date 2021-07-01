@@ -1,9 +1,9 @@
 <launch>
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find texas_robocamp)/worlds/basic_world.world" />
+        <arg name="world_name" value="$(find texas_robotics_academy)/worlds/basic_world.world" />
         <!-- more default parameters can be changed here -->
     </include>
     <!-- Spawn a robot into Gazebo -->
-    <include file="$(find texas_robocamp)/launch/include/robot.launch.xml"/>
+    <include file="$(find texas_robotics_academy)/launch/include/robot.launch.xml"/>
 </launch>
