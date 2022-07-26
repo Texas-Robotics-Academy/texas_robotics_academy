@@ -1,50 +1,42 @@
 <sdf version='1.6'>
   <world name='default'>
-    <model name='ground_plane'>
+    <model name='racetrack'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
       <static>1</static>
-      <link name='ground'>
+      <link name='link'>
+        <inertial>
+          <mass>1000</mass>
+        </inertial>
         <collision name='collision'>
           <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
+            <mesh>
+              <uri>file://models/longhorn.dae</uri>
+            </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
           <surface>
-            <friction>
-              <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
             <contact>
               <ode/>
             </contact>
             <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
         <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
           <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
+            <mesh>
+              <uri>file://models/longhorn.dae</uri>
+            </mesh>
           </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <gravity>1</gravity>
       </link>
     </model>
     <gravity>0 0 -9.8</gravity>
@@ -91,17 +83,6 @@
               <size>10.2 0.2 0.746663</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>0 0 0 1</specular>
-            <emissive>0 0 0 1</emissive>
-          </material>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <transparency>0</transparency>
         </visual>
@@ -185,18 +166,6 @@
               <size>10.2 0.2 0.746663</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>0 0 0 1</specular>
-            <emissive>0 0 0 1</emissive>
-            <shader type='pixel'/>
-          </material>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <transparency>0</transparency>
         </visual>
@@ -280,18 +249,6 @@
               <size>10.2 0.2 0.746663</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>0 0 0 1</specular>
-            <emissive>0 0 0 1</emissive>
-            <shader type='pixel'/>
-          </material>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <transparency>0</transparency>
         </visual>
@@ -375,18 +332,6 @@
               <size>10.2 0.2 0.746663</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <diffuse>1 1 1 1</diffuse>
-            <specular>0 0 0 1</specular>
-            <emissive>0 0 0 1</emissive>
-            <shader type='pixel'/>
-          </material>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <transparency>0</transparency>
         </visual>
